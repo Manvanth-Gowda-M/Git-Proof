@@ -56,7 +56,39 @@ export default function Home() {
       <footer className="w-full max-w-6xl mx-auto mt-24 pt-8 border-t-2 border-black text-center font-sans text-neutral-800 text-sm font-medium">
         <p>Printed on the World Wide Web using Next.js and Tailwind CSS.</p>
         <p className="mt-2 uppercase tracking-widest text-xs">© {mounted ? new Date().getFullYear() : ""} GitProof Press. 100% Free and Open Source.</p>
+
+        {/* Built by credits */}
+        <div className="mt-6 pt-4 border-t border-neutral-300 flex flex-col sm:flex-row items-center justify-center gap-1 text-xs text-neutral-500 uppercase tracking-widest">
+          <span className="font-bold text-neutral-700">Built by</span>
+          <a
+            href="https://www.nextgenxplorer.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-black text-black hover:underline underline-offset-4 transition-all"
+          >
+            NextGenX
+          </a>
+          <span className="hidden sm:inline text-neutral-400 mx-1">—</span>
+          <a
+            href="https://manvanth.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline underline-offset-4 transition-all hover:text-black"
+          >
+            Manvanth Gowda M
+          </a>
+          <span className="text-neutral-400 mx-1">&amp;</span>
+          <a
+            href="https://mithungowda.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline underline-offset-4 transition-all hover:text-black"
+          >
+            Mithun Gowda B
+          </a>
+        </div>
       </footer>
+
     </main>
   );
 }
