@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dev artifacts (one-off scripts & generated files)
+*.py
+gen_laurel.py
+laural_out.txt
+laural_out.txt
+laurel_out.txt
+full_svg.txt
+test_badge.html
+/public/test_badge.html

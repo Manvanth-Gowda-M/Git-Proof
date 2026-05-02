@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-background: #f4f1ea;
+  --color-foreground: #1a1a1a;
+  
+  --color-ink-100: #e5e5e5;
+  --color-ink-200: #cccccc;
+  --color-ink-300: #b3b3b3;
+  --color-ink-400: #999999;
+  --color-ink-500: #808080;
+  --color-ink-600: #666666;
+  --color-ink-700: #4d4d4d;
+  --color-ink-800: #333333;
+  --color-ink-900: #1a1a1a;
+
+  --color-paper-50: #ffffff;
+  --color-paper-100: #fbfaf8;
+  --color-paper-200: #f4f1ea;
+  --color-paper-300: #ebe5d8;
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #f4f1ea;
+  --foreground: #1a1a1a;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  /* Subtle cream paper texture */
+  background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+}
+
+/* Newspaper utilities */
+.news-border {
+  border: 1px solid #1a1a1a;
+}
+
+.news-border-double {
+  border: 4px double #1a1a1a;
+}
+
+.news-border-y {
+  border-top: 2px solid #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.news-border-thick {
+  border-top: 4px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.paper-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(26,26,26,1);
+  transition: all 0.2s ease;
+}
+
+.paper-shadow:hover {
+  box-shadow: 6px 6px 0px 0px rgba(26,26,26,1);
+  transform: translate(-2px, -2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f1ea; 
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc; 
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1a1a; 
+}
+
+/* Print optimizations for rendering */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }
