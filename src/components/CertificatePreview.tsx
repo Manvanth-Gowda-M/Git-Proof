@@ -152,10 +152,10 @@ function AchievementCertificate({ data }: { data: RepoData }) {
 // ==========================================
 function StarCertificate({ data }: { data: RepoData }) {
   return (
-    <div className="w-full h-full bg-white p-8 relative overflow-hidden text-black font-serif">
+    <div className="w-full h-full bg-white p-6 relative overflow-hidden text-black font-serif">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-80 mix-blend-multiply pointer-events-none"></div>
 
-      <div className="w-full h-full border-[12px] border-black p-12 flex flex-col items-center justify-center relative bg-[#f4f1ea] shadow-inner">
+      <div className="w-full h-full border-[12px] border-black p-6 flex flex-col items-center justify-center relative bg-[#f4f1ea] shadow-inner">
         
         <div className="absolute top-0 right-0 -mr-48 -mt-48 opacity-[0.05] pointer-events-none">
           <Star className="w-[600px] h-[600px] text-black" fill="currentColor" />
@@ -164,30 +164,36 @@ function StarCertificate({ data }: { data: RepoData }) {
           <Star className="w-[600px] h-[600px] text-black" fill="currentColor" />
         </div>
 
-        <div className="z-10 text-center flex flex-col items-center w-full">
-          <div className="flex items-center justify-center gap-8 mb-8 border-y-4 border-black py-4 w-full">
-            <Star className="w-12 h-12 text-black" fill="currentColor" />
-            <h1 className="text-6xl font-black text-black tracking-[0.2em] uppercase">STAR MILESTONE</h1>
-            <Star className="w-12 h-12 text-black" fill="currentColor" />
+        <div className="z-10 text-center flex flex-col items-center w-full gap-3">
+          {/* Header */}
+          <div className="flex items-center justify-center gap-6 mb-1 border-y-4 border-black py-3 w-full">
+            <Star className="w-10 h-10 text-black flex-shrink-0" fill="currentColor" />
+            <h1 className="text-5xl font-black text-black tracking-[0.2em] uppercase">STAR MILESTONE</h1>
+            <Star className="w-10 h-10 text-black flex-shrink-0" fill="currentColor" />
           </div>
 
-          <p className="text-2xl text-neutral-800 mb-8 italic">This certifies that the repository</p>
+          <p className="text-xl text-neutral-800 italic">This certifies that the repository</p>
           
-          <div className="inline-block px-16 py-6 bg-white border-4 border-black mb-12 shadow-[8px_8px_0px_rgba(0,0,0,1)] relative">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 bg-[#f4f1ea] border-2 border-black font-bold font-sans text-xs uppercase tracking-widest">
+          {/* Repo Name Box */}
+          <div className="w-full px-8 py-4 bg-white border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] relative">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 bg-[#f4f1ea] border-2 border-black font-bold font-sans text-xs uppercase tracking-widest whitespace-nowrap">
               Verified Ownership
             </div>
-            <h2 className="text-6xl font-black tracking-tight">{data.owner}/<span className="underline decoration-4 underline-offset-8">{data.name}</span></h2>
+            <h2 className="text-4xl font-black tracking-tight leading-tight break-all">
+              {data.owner}/<span className="underline decoration-4 underline-offset-4">{data.name}</span>
+            </h2>
           </div>
 
-          <p className="text-2xl text-neutral-800 mb-6 italic">has officially achieved</p>
+          <p className="text-xl text-neutral-800 italic">has officially achieved</p>
           
-          <div className="flex items-end justify-center gap-6 relative">
-            <span className="text-9xl font-black tabular-nums leading-none tracking-tighter">{data.stars.toLocaleString()}</span>
-            <span className="text-5xl font-black pb-2 tracking-widest uppercase border-b-8 border-black">STARS</span>
+          {/* Star Count */}
+          <div className="flex items-end justify-center gap-4">
+            <span className="text-8xl font-black tabular-nums leading-none tracking-tighter">{data.stars.toLocaleString()}</span>
+            <span className="text-4xl font-black pb-1 tracking-widest uppercase border-b-8 border-black">STARS</span>
           </div>
           
-          <p className="text-xl text-neutral-800 mt-16 max-w-2xl text-center uppercase font-bold tracking-widest font-sans border-t-2 border-black pt-4">
+          {/* Footer tagline */}
+          <p className="text-sm text-neutral-800 max-w-2xl text-center uppercase font-bold tracking-widest font-sans border-t-2 border-black pt-3 w-full mt-1">
             Recognized globally by the developer community for excellence in open source software.
           </p>
         </div>
@@ -195,6 +201,7 @@ function StarCertificate({ data }: { data: RepoData }) {
     </div>
   );
 }
+
 
 // ==========================================
 // TEMPLATE: Developer Certificate
