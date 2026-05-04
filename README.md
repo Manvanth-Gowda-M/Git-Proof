@@ -15,7 +15,7 @@ Showcase your open-source contributions with professional, newspaper-styled cred
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](https://github.com/Manvanth-Gowda-M/Git-Proof/pulls)
 
-[🚀 Live Demo](https://git-proof.vercel.app) · [🐛 Report Bug](https://github.com/Manvanth-Gowda-M/Git-Proof/issues) · [✨ Request Feature](https://github.com/Manvanth-Gowda-M/Git-Proof/issues)
+[🚀 Live Demo](https://gitproof.in) · [🐛 Report Bug](https://github.com/Manvanth-Gowda-M/Git-Proof/issues) · [✨ Request Feature](https://github.com/Manvanth-Gowda-M/Git-Proof/issues)
 
 </div>
 
